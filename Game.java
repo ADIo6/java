@@ -4,9 +4,11 @@ import java.util.Scanner;
 
 class Game{
     public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
-        int num,choose_range;
-        
+        try(Scanner sc = new Scanner(System.in))
+        {
+
+            int num,choose_range;
+            
         System.out.println("Enter the range you want to guess in \n press 1 for (0-10) \n press 2 for (0-100)");
         choose_range=sc.nextInt();
         switch (choose_range) {
@@ -57,6 +59,7 @@ class Game{
                 
             
             break;
+        }
         }
     }
        
